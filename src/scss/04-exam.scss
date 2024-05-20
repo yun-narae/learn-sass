@@ -1,5 +1,34 @@
-@mixin padding($value) {
-  padding: value;
+// padding 관련 믹스인
+
+@mixin padding-inline-start($value){
+  padding-left: $value;
+  padding-inline-start: $value;
+}
+@mixin padding-inline-end($value){
+  padding-right: $value;
+  padding-inline-end: $value;
+}
+@mixin padding-block-start($value){
+  padding-top: $value;
+  padding-block-start: $value;
+}
+@mixin padding-block-end($value){
+  padding-bottom: $value;
+  padding-block-end: $value;
+}
+
+@mixin paddingX($value){
+  @include padding-inline-start($value);
+  @include padding-inline-end($value);
+}
+@mixin paddingY($value){
+  @include padding-block-start($value);
+  @include padding-block-end($value);
+}
+
+@mixin padding($value){
+  @include paddingX($value);
+  @include paddingY($value);
 }
 
 .box {

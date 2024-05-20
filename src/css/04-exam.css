@@ -1,5 +1,12 @@
 .box {
-  padding: value;
+  padding-left: 20px;
+  padding-inline-start: 20px;
+  padding-right: 20px;
+  padding-inline-end: 20px;
+  padding-top: 20px;
+  padding-block-start: 20px;
+  padding-bottom: 20px;
+  padding-block-end: 20px;
 }
 
 .container {
