@@ -1,0 +1,6 @@
+{
+    "liveServer.settings.port" : 8090, 
+    "liveServer.settings.host" : "localhost",
+    "liveServer.settings.root" : "/src",
+    "liveServer.settings.CustomBrowser" : "chrome"
+  }

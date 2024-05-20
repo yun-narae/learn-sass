@@ -1,0 +1,39 @@
+:root{
+    --primary: #00ff00;
+}
+
+$base-color: #bf2243;
+$border-color: rgba($base-color, 0.7);
+
+.alert {
+  border: 1px solid $border_color; // ←
+}
+
+$color: #bf2243;
+.rule-1 {
+  color: $color;
+}
+
+$color: #0e0948;
+.rule-2 {
+  color: $color;
+}
+
+
+
+:root {
+    --color: #fff;
+}
+
+body {
+    --color : #0e0948; //글로벌 변수
+    background-color: var(--color); //로컬 변수
+} 
+
+div {
+    background-color: yellow;
+}
+
+h1 {
+    color: var(--color);
+}
