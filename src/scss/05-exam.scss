@@ -1,0 +1,23 @@
+// 플레이스 홀더
+%button {
+    border: 1px solid currentColor;
+    border-radius: 8px;
+    padding: 120px 8px;
+}
+
+.button {
+    &--red {
+        @extend .button;
+        background-color: red;
+    }
+
+    &--blue {
+        @extend .button;
+        background-color: blue;
+    }
+
+    &--green {
+        @extend .button;
+        background-color: green;
+    }
+}
