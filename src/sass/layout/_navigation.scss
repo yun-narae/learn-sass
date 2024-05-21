@@ -1,0 +1,40 @@
+@use './../utils' as *;
+
+.navigation{
+  @include position(fixed);
+  @include size(100%, 100vh);
+  background-color: $white;
+  translate: 0 -200%;
+  transition: all 200ms;
+
+  @include mq(xl){
+    @include position(static);
+    @include size(auto, auto);
+    background-color: transparent;
+  }
+
+  &.navigation--open{
+    translate: 0;
+  }
+
+  .menu--close{
+    @include position(absolute, 1rem 1rem initial initial);
+    font-size: 32px;
+
+    @include mq(xl){
+      display: none;
+    }
+  }
+}
+
+.menu{
+  font-size: 28px;
+  @include flexbox(column, $gap:16px);
+  @include padding(50px, 48px);
+
+  @include mq(xl){
+    @include flexbox($justify:space-between);
+    @include padding(0);
+    font-size: 12px;
+  }
+}

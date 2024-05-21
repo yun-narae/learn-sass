@@ -1,0 +1,49 @@
+@use './../utils' as *;
+
+.buttons-wrapper{
+  @include flexbox(column, $gap:16px);
+  @include padding(24px);
+}
+
+// 버튼 컴포넌트
+.button{
+  $default-color: $blue-300;
+  $dark-color: $black;
+  $light-color: $white;
+  $spac-x: $base-spacing;
+  $spac-y: $small-spacing;
+  $small-text: $x-small-text;
+  $large-text: $x-small-text;
+
+  all:unset;
+  display: inline-block;
+  padding: $spac-y $spac-x;
+  font-size: rem(14px);
+
+  &--rounded{
+    @include radius('full');
+  }
+
+  &--fill{
+    background-color: $default-color;
+    color: $light-color;
+
+    &.black{
+      background-color: $dark-color;
+    }
+  }
+
+  &--outline{
+    border: 1px solid currentColor;
+    color: $default-color;
+
+    &.black{
+      color: $dark-color;
+    }
+  }
+
+  // 1024px 이상 버튼 글자크기
+  @include mq(lg){
+    font-size: rem(18px);
+  }
+}

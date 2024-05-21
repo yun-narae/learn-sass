@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>애플 제품 카드 컴포넌트</title>
+  <link rel="icon" href="./favicon/apple-favicon.svg" />
+  <link rel="apple-touch-icon" href="./favicon/apple-favicon.svg" />
+  <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <!-- <script type="module" src="/js/navigation.js"></script> -->
+</head>
+<body>
+
+  <!-- 밝은 배경 스타일 / 출시일 추후 공개 버전 -->
+  <!-- iPad Pro -->
+  <article class="product-card dark-bg ipad-pro">
+    <h2 class="product-card__headline">iPad Pro</h2>
+    <p class="product-card__description"><span>놀라우리만치 얇다.</span> <span>엄청나게 강력하다.</span></p>
+    <p class="product-card__release">출시일 추후 공개</p>
+    <div class="product-card__links">
+      <a href="/" class="button button--rounded button--fill">더 알아보기</a>
+      <a href="/" class="button button--rounded button--outline">가격 보기</a>
+    </div>
+  </article>
+
+  <!-- 어두운 배경 스타일 / 출시일 추후 비공개 버전 / 제품 설명 줄바꿈 유형 -->
+  <!-- iPad Air -->
+  <article class="product-card ipad-air">
+    <h2 class="product-card__headline">iPad air</h2>
+    <p class="product-card__description line-break"><span>두 가지 사이즈. 더 빠른 칩.</span> <span>무엇이든 거뜬하게.</span></p>
+    <p class="product-card__release" hidden>출시일 추후 공개</p>
+    <div class="product-card__links">
+      <a href="/" class="button button--rounded button--fill">더 알아보기</a>
+      <a href="/" class="button button--rounded button--outline">가격 보기</a>
+    </div>
+  </article>
+  
+</body>
+</html>

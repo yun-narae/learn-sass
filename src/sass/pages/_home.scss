@@ -1,0 +1,16 @@
+@use './../components/product-card';
+@use './../utils' as *;
+
+
+// 애플 제품 카드 리스트
+.product-list{
+  @include gridbox(1);
+
+  @include mq('xl'){
+    @include gridbox(2);
+
+    .ipad-pro, .ipad-air, .iphone15-pro{
+      @include grid-column-span(2);
+    }
+  }
+}
