@@ -1,4 +1,7 @@
 // padding 관련 믹스인
+@use 'sass:meta';
+@use 'sass:list';
+
 
 @mixin padding-inline-start($value){
   padding-left: $value;
@@ -77,7 +80,57 @@
 	}
 }
 
+$position-values: static relative absolute fixed sticky;
+
+@mixin position($type, $args...) {
+  @each $key in $position-values {
+    @if not list.index($position-values, $type) {
+      @error '#{$type}은 유효한 position 값이 아닙니다. (예: static relative absolute fixed sticky)';
+    }
+  }
+
+  position: $type;
+
+	@if $type == sticky {
+    @supports not (position: sticky) {
+      poistion: fixed;
+    }
+  }
+
+  @each $name, $value in meta.keywords($args) {
+    #{$name}: $value;
+  }
+}
+
 .container{
   @include a11yHidden();
   color: red;
+}
+
+.notification {
+  @include position(sticky, $top: 20px, $left: 0, $right: 0, $z-index: 100);
+}
+
+$breakpoint: 768px;
+
+// _mixins.scss 파일에 믹스인 작성
+@mixin sm {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+.box {
+  @include sm{
+    background: yellow;
+  }
+
+  @include lg {
+    background: pink;
+  }
 }

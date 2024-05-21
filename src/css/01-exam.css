@@ -3,5 +3,6 @@
 /* 이 주석 유형은 인터폴레이션도 포함 가능합니다.
  * 9 + 2 = 11 */
 /*! 이 주석은 압축(compressed) 모드에서도 출력됩니다. */
-
-/*# sourceMappingURL=01-exam.css.map */
+p .sans {
+  font: SpoqaHanSans, Helvetica, Verdana, sans-serif;
+}

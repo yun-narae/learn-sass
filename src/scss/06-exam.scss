@@ -1,0 +1,7 @@
+@use './00-variables' as var;
+@use './00-colors' as cls;
+
+.box{
+  color: var.$yellow;
+  background-color: cls.$yellow;
+}

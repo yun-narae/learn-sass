@@ -1,34 +1,8 @@
-:root {
-  --primary: #00ff00;
+@charset "UTF-8";
+.content {
+  value: "글로벌(global) 변수";
 }
 
-.alert {
-  border: 1px solid rgba(191, 34, 67, 0.7);
+.sidebar {
+  value: "글로벌(global) 변수";
 }
-
-.rule-1 {
-  color: #bf2243;
-}
-
-.rule-2 {
-  color: #0e0948;
-}
-
-:root {
-  --color: #fff;
-}
-
-body {
-  --color: #0e0948;
-  background-color: var(--color);
-}
-
-div {
-  background-color: yellow;
-}
-
-h1 {
-  color: var(--color);
-}
-
-/*# sourceMappingURL=02-exam.css.map */

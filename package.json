@@ -1,15 +1,15 @@
 {
   "scripts": {
-    "dev": "live-server",
-    "sass": "sass src/scss/main.scss src/css/main.css",
-    "update": "sass --update src/scss/main.scss src/css/main.css",
-    "watch": "sass --update --watch src/scss/main.scss src/css/main.css",
-    "sass-all": "sass src/scss:src/css",
-    "update-all": "sass --update src/scss:src/css",
-    "watch-all": "sass --update --watch src/scss:src/css",
-    "compressed": "sass src/scss:src/css --style compressed",
-    "no-map": "sass src/scss:src/css --no-source-map",
-    "clean": "rm -rf src/css"
+    "start": "run-p sass-watch scss-watch dev",
+    "dev": "live-server src --port=3000 --host=localhost",
+    "sass": "sass src/sass:src/styles",
+    "scss": "sass src/scss:src/css",
+    "sass-no-map": "npm run sass -- --no-source-map",
+    "scss-no-map": "npm run scss -- --no-source-map",
+    "sass-watch": "npm run sass-no-map -- --watch",
+    "scss-watch": "npm run scss-no-map -- --watch",
+    "compressed": "npm run sass --style compressed",
+    "clean": "rm -rf src/css src/styles"
   },
   "devDependencies": {
     "sass": "^1.77.2"
