@@ -1,0 +1,6 @@
+@use './modules' as mod;
+
+.box{
+  padding: mod.$m1-spacing-2;
+  @include mod.m2-size(100px);
+}

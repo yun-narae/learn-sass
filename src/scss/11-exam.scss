@@ -1,0 +1,74 @@
+@mixin size($width, $height: null) {
+    width: $width;
+
+    @if $height !=null {
+        height: $height;
+    }
+}
+
+.box {
+    @include size(100px, 50px);
+}
+
+@mixin size($width, $height: null, $rounded: null) {
+    width: $width;
+
+    @if $height !=null {
+        height: $height;
+    }
+
+    @else {
+        height: $width;
+    }
+
+    @if $rounded ==sm {
+        border-radius: 2px;
+    }
+
+    @else if $rounded ==md {
+        border-radius: 4px;
+    }
+
+    @else if $rounded ==lg {
+        border-radius: 6px;
+    }
+
+    @else if $rounded ==xl {
+        border-radius: 8px;
+    }
+
+    @else {
+        border-radius: $rounded;
+    }
+}
+
+.box1 {
+    @include size(100px, 50px, xl)
+}
+
+@mixin font($font-size: 16, $until-font-size: 24) {
+    @while $font-size <=$until-font-size {
+
+        .font-size-#{$font-size} {
+            font-size: #{$font-size}px;
+            line-height: #{$font-size + 2}px;
+            letter-spacing: 1px;
+        }
+
+        $font-size: $font-size + 2;
+    }
+}
+
+.box2 {
+    @include font(18, 20);
+}
+
+@each $icon in search more arrow {
+    .icon-#{$icon} {
+        background: url(/images/icons/#{icon}.svg) no-repeat 0 0;
+    }
+}
+
+.box3 {
+
+}

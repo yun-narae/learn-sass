@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+// 연산자
+$operator1: 9s + 21s;
+$operator2: 1cm - 11cm;
+$operator3: math.div(8px, 1px) * math.div(2px, 1px);$operator4: 101px % 8px;
+$operator5: math.div(100px, 20px);
+
+.box{
+  font-size: $operator5;
+}
+
+.box1{
+  font-size: #{$operator3}px;
+  padding: $operator3+px;
+}
+
+@debug 9*2;
+
+@debug (5px 7px 10px) != (5px, 7px, 10px); // true

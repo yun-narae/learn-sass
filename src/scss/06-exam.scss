@@ -1,7 +1,10 @@
 @use './00-variables' as var;
 @use './00-colors' as cls;
+@use './config';
 
 .box{
   color: var.$yellow;
   background-color: cls.$yellow;
+  padding: config.$spacing;
+  background-image: url(/imags);
 }

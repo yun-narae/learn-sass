@@ -1,0 +1,39 @@
+@use 'sass:math';
+@use 'sass:list';
+
+$float-values: left right none;
+
+@mixin float($direction: left, $gap: 8px) {
+	float: $direction;
+
+	@each $value in $float-values {
+		@if not list.index($float-values, $direction) {
+			@error '#{$direction} 값은 유효한 float 값이 아닙니다.';
+		}
+	}
+
+	$gap-direction: if($direction == left, right, left);
+	margin-#{$gap-direction}: if(math.is-unitless($gap), $gap * 1px, $gap);
+}
+
+@mixin fl($gap: 8px) {
+  @warn 'fl 믹스인 사용이 더 이상 권장되지 않습니다. float 믹스인을 사용하세요.';
+  @include float(left, $gap);
+}
+
+@mixin fr($gap: 8px) {
+  @warn 'fr 믹스인 사용이 더 이상 권장되지 않습니다. float 믹스인을 사용하세요.';
+  @include float(right, $gap);
+}
+
+@mixin fn($gap: 8px) {
+  @warn 'fn 믹스인 사용이 더 이상 권장되지 않습니다. float 믹스인을 사용하세요.';
+  @include float(none, $gap);
+}
+
+$spacing: 10px / 2px;
+
+.box{
+  @include fl;
+  padding: $spacing;
+}

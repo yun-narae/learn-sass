@@ -1,0 +1,33 @@
+.box {
+  width: 100px;
+  height: 50px;
+}
+
+.box1 {
+  width: 100px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.box2 .font-size-18 {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+.box2 .font-size-20 {
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+.icon-search {
+  background: url(/images/icons/icon.svg) no-repeat 0 0;
+}
+
+.icon-more {
+  background: url(/images/icons/icon.svg) no-repeat 0 0;
+}
+
+.icon-arrow {
+  background: url(/images/icons/icon.svg) no-repeat 0 0;
+}
